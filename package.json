@@ -1,6 +1,6 @@
 {
-  "name": "express_ms_example",
-  "version": "1.0.0",
+  "name": "express-ms-example",
+  "version": "1.1.0",
   "description": "Easy express microservice builder. Big thanks to https://github.com/codergogoi, for his tutorial",
   "main": "index.js",
   "scripts": {
