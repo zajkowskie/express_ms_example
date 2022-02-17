@@ -1,0 +1,27 @@
+{
+  "name": "express_ms_example",
+  "version": "1.0.0",
+  "description": "Easy express microservice builder. Big thanks to https://github.com/codergogoi, for his tutorial",
+  "main": "index.js",
+  "scripts": {
+    "create": "node create_service.js --name=$npm_config_name --port=$npm_config_port",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server" : "nodemon gateway/index.js"
+  },
+  "keywords": [
+    "express",
+    "microservice",
+    "api",
+    "generator",
+    "mongo"
+  ],
+  "author": "@zajkowskie Radoslaw Zajkowski",
+  "license": "ISC",
+  "dependencies": {
+    "copy-dir": "^1.3.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "express-http-proxy": "^1.6.3",
+    "nodemon": "^2.0.15"
+  }
+}
