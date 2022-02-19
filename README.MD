@@ -7,3 +7,6 @@ After i watched https://github.com/codergogoi YT [tutorial](https://www.youtube.
 Just type `npm install` and after that `npm run create --name=testService --port=testServicePort` and all will be created in seconds.
 
 After that just go to `testService` folder and type `npm run`. You have working microservice template, of corse without logic.
+
+## 2. Reminder
+Remember to remove .git folder :)
