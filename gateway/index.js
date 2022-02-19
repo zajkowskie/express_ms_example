@@ -9,12 +9,13 @@ app.use(express.json());
 
 //___ROUTES___ 
 app.get('/', async (req,res,next) => {
-    return res.status(200).json({message : "OK!"});
+
+        return res.status(200).json({message : "OK!"});
+   
 });
 
 
- app.use('/customers', proxy('http://localhost:8008'));
-app.use('/rental', proxy('http://localhost:8006'));
+app.use('/transactions', proxy('http://localhost:8001'));
 app.listen(8000, () => {
     console.log('Gateway is Listening to Port 8000')
 })

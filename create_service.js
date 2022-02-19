@@ -1,8 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const {
-  exec
-} = require("child_process");
 var copydir = require('copy-dir');
 
 const myArgs = process.argv.slice(2);
