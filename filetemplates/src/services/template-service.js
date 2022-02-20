@@ -1,11 +1,11 @@
-const { microservice_nameRepository } = require("../database");
+const { Microservice_nameRepository } = require("../database");
 const { FormateData } = require("../utils");
 
 // All Business logic will be here
 class microservice_nameService {
 
     constructor(){
-        this.repository = new microservice_nameRepository();
+        this.repository = new Microservice_nameRepository();
     }
     
     async GetOrders(customerId){

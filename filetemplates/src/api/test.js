@@ -1,5 +1,4 @@
 const Microservice_nameService = require("../services/microservice_name-service");
-const { PublishCustomerEvent } = require("../utils");
 const UserAuth = require('./middlewares/auth');
 
 module.exports = (app) => {

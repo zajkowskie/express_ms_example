@@ -41,11 +41,16 @@ copydir.sync(path.join(__dirname, 'filetemplates'), dirName, {
 /**
  * Main files
  */
-//index.json
+//index.js
 let express_ms_index_file = fs.readFileSync(`${service_name}/index.js`, 'utf8');
 express_ms_index_file = express_ms_index_file.replace(/microservice_name/g, service_name);
 express_ms_index_file = express_ms_index_file.replace(/microservice_port/g, service_port);
 fs.writeFileSync(`${service_name}/index.js`, express_ms_index_file);
+
+//express-app.js
+let express_app = fs.readFileSync(`${service_name}/src/express-app.js`, 'utf8');
+express_app = express_app.replace(/microservice_name/g, service_name);
+fs.writeFileSync(`${service_name}/src/express-app.js`, express_app);
 
 //package.json
 let package_json = JSON.parse(fs.readFileSync(`${service_name}/package.json`, 'utf8'));
@@ -61,6 +66,7 @@ fs.writeFileSync(`${service_name}/.env.dev`, dot_env);
 //template-service.js
 let template_service = fs.readFileSync(`${service_name}/src/services/template-service.js`, 'utf8');
 template_service = template_service.replace(/microservice_name/g, service_name);
+template_service = template_service.replace(/Microservice_name/g,  service_name.charAt(0).toUpperCase() + service_name.slice(1));
 fs.writeFileSync(`${service_name}/src/services/${service_name}-service.js`, template_service);
 
 /**
